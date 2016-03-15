@@ -50,7 +50,6 @@
 #endif
 
 #include <linux/acpi.h>
-#include <linux/acpi_gpio.h>
 
 /*
  * Android private command strings, PLEASE define new private commands here

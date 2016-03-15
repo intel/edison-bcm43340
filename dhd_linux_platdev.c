@@ -29,7 +29,6 @@
 #include <linux/init.h>
 #include <linux/platform_device.h>
 #include <linux/acpi.h>
-#include <linux/acpi_gpio.h>
 #include <asm/intel-mid.h>
 #include <bcmutils.h>
 #include <linux_osl.h>
@@ -152,7 +151,7 @@ bool wifi_platform_irq_is_fastirq(wifi_adapter_info_t *adapter)
 	if (!adapter || !adapter->wifi_plat_data)
 		return false;
 	plat_data = adapter->wifi_plat_data;
-	return plat_data->use_fast_irq;
+	return 0;
 }
 
 int wifi_platform_set_power(wifi_adapter_info_t *adapter, bool on, unsigned long msec)
